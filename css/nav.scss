@@ -126,8 +126,9 @@
 
 			@include devices {
 				display: inline-flex;
-				flex-wrap: wrap;
+				flex-direction: column;
 				justify-content: center;
+				align-items: center;
 
 				span.nav-item__link {
 					display: inline-flex;

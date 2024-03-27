@@ -211,8 +211,9 @@ body {
 @media (max-width: 1023px) {
   .nav-item._has-sub-menu {
     display: inline-flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .nav-item._has-sub-menu span.nav-item__link {
     display: inline-flex;
