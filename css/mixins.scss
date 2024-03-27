@@ -1,0 +1,5 @@
+@import "breakpoint";
+
+@function vc($value) {
+  @return calc(#{$value} * var(--width-multiplier));
+}

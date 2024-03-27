@@ -1,0 +1,46 @@
+.btn {
+	$button: &;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	border-radius: 16px;
+	margin: 0;
+	padding: 12px 16px;
+	box-shadow: none;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	color: $color-white;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.35s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-primary-hover;
+	}
+
+	&--filled {
+		background: $color-primary;
+	}
+
+	&--bordered {
+		border: 1px solid $color-primary;
+		color: $color-primary;
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-primary-hover;
+		}
+	}
+
+	&--size {
+		&-lg {
+			height: 80px;
+			min-width: 240px;
+			border-radius: 32px;
+		}
+	}
+}

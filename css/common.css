@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy/Gilroy-Regular.eot");
+  src: local("../fonts/Gilroy/GilroyRegular"), local("../fonts/Gilroy/Gilroy-Regular"), url("../fonts/Gilroy/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy/Gilroy-Bold.eot");
+  src: local("../fonts/Gilroy/GilroyBold"), local("../fonts/Gilroy/Gilroy-Bold"), url("../fonts/Gilroy/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy/Gilroy-Semibold.eot");
+  src: local("../fonts/Gilroy/GilroySemibold"), local("../fonts/Gilroy/Gilroy-Semibold"), url("../fonts/Gilroy/Gilroy-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy/Gilroy-Medium.eot");
+  src: local("../fonts/Gilroy/GilroyMedium"), local("../fonts/Gilroy/Gilroy-Medium"), url("../fonts/Gilroy/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+:root {
+  --width-base: 1280;
+  --width-current: 1280px;
+  --width-multiplier: var(--width-current) / var(--width-base);
+}
+@media (min-width: 1025px) {
+  :root {
+    --width-base: 1280;
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --width-base: 480;
+    --width-current: 100vw;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --width-base: 375;
+    --width-current: 100vw;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 1.38;
+  color: #1A1A1A;
+  background-color: #fff;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-decoration-skip: objects;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 calc(40 * var(--width-multiplier));
+  max-width: calc(1280 * var(--width-multiplier));
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 calc(20 * var(--width-multiplier));
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: calc(40 * var(--width-multiplier));
+  line-height: calc(48 * var(--width-multiplier));
+  color: #1A1A1A;
+}
+@media (max-width: 1023px) {
+  .title {
+    font-size: calc(24 * var(--width-multiplier));
+    line-height: 1.2;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */

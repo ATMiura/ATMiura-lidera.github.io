@@ -1,0 +1,111 @@
+.swiper {
+	&-slide {
+		@include desktop {
+			&:not(.swiper-slide-visible) {
+				//opacity: 0;
+				//visibility: hidden;
+			}
+		}
+	}
+
+	&-actions {
+		display: flex;
+		align-items: center;
+
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		.swiper-pagination {
+			margin-left: 13px !important;
+		}
+	}
+
+	&-buttons {
+		display: flex;
+		align-items: center;
+
+		.swiper-button {
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
+		}
+	}
+
+	&-button {
+		position: relative;
+		inset: 0;
+		border-radius: 100%;
+		margin: 0;
+		width: 40px;
+		height: 40px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: $color-white;
+		box-shadow: 0 1px 7px rgba(0, 0, 0, 0.09);
+		background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3334 7.99988L2.66675 7.99988' stroke='%239D097C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.0003 11.3334C10.0003 11.3334 13.3336 8.87839 13.3336 7.99999C13.3336 7.1216 10.0002 4.66669 10.0002 4.66669' stroke='%239D097C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+
+		&::after {
+			display: none;
+		}
+
+		&-prev {
+			left: 0;
+			transform: rotate(180deg);
+		}
+
+		&-next {
+			right: 0;
+		}
+
+		&-disabled {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&-pagination {
+		position: relative;
+		bottom: 0 !important;
+		margin: 0 !important;
+		display: flex;
+		align-items: center;
+
+		&-bullet {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid $color-text;
+			width: 4px;
+			height: 4px;
+			background-color: $color-text;
+			opacity: 1;
+			transition: 0.25s;
+
+			&::after {
+				content: "";
+				border-radius: 100%;
+				display: block;
+				width: 8px;
+				height: 8px;
+				background-color: $color-text;
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			&-active {
+				border: 1px solid $color-primary;
+				width: 24px;
+				height: 24px;
+				background-color: transparent;
+
+				&::after {
+					background-color: $color-primary;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}

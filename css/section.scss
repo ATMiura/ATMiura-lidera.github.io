@@ -1,0 +1,148 @@
+.section {
+	overflow: hidden;
+
+	&__header {
+		margin-bottom: 32px;
+
+		@include devices {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__title {
+		width: 100%;
+		max-width: 510px;
+		margin: 0 auto;
+		font-weight: 700;
+		font-size: 44px;
+		line-height: 1.18;
+		text-align: center;
+
+		background: linear-gradient(258.75deg, #2D1178 25.04%, #DB2D8F 77.78%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+
+		@include devices {
+			max-width: 100%;
+			font-size: 24px;
+			height: 32px;
+			text-align: left;
+
+			background: linear-gradient(258.75deg, #2D1178 25.04%, #DB2D8F 77.78%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+
+	&__body {
+
+	}
+
+	&--bg {
+		&-nebula {
+			background-color: $color-nebula;
+		}
+	}
+
+	&--radius {
+		&-40 {
+			border-radius: 40px;
+			overflow: hidden;
+		}
+	}
+
+	&--default {
+		padding-top: 170px;
+		padding-bottom: 50px;
+
+		@media (max-width: 1199px) {
+			padding-top: 100px;
+			padding-bottom: 50px;
+		}
+
+		@include devices {
+			padding-top: 30px;
+		}
+	}
+
+	&--intro {
+
+	}
+
+	&--present {
+		padding: 144px 0 234px;
+
+		@media (max-width: 1199px) {
+			padding: 120px 0;
+		}
+	}
+
+	&--story {
+		margin-bottom: 50px;
+		padding: 87px 0 103px;
+
+		@media (max-width: 1199px) {
+			margin-bottom: 40px;
+			padding: 80px 0;
+		}
+
+		@include devices {
+			margin-bottom: 50px;
+			padding: 16px 0;
+		}
+	}
+
+	&--business {
+		.swiper-actions {
+			justify-content: center;
+			margin-top: 32px;
+		}
+
+		.swiper-pagination {
+			width: auto;
+			margin: 0 16px !important;
+		}
+
+		.swiper-button {
+			background-color: $color-pink-2;
+		}
+
+		@include devices {
+			.container {
+				padding-right: 0;
+			}
+
+			.swiper-actions {
+				display: none;
+			}
+		}
+	}
+
+	&--study {
+		.swiper {
+			overflow: visible;
+		}
+	}
+
+	&--news {
+		padding-bottom: 143px;
+
+		.section__header {
+			@include desktop {
+				margin-bottom: 40px;
+			}
+		}
+
+		.swiper {
+			overflow: visible;
+		}
+
+		@include devices {
+			padding-bottom: 80px;
+		}
+	}
+}

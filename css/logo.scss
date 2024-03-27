@@ -1,0 +1,13 @@
+.logo {
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+	width: 126px;
+	min-width: 126px;
+	height: 40px;
+
+	@include devices {
+		width: 100px;
+		min-width: 100px;
+	}
+}

@@ -1,0 +1,19 @@
+.socials {
+	&__list {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__item {
+		width: 20px;
+		height: 20px;
+		color: $color-primary;
+
+		&:hover {
+			color: $color-primary-hover;
+		}
+
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+}

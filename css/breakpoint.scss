@@ -1,0 +1,11 @@
+@mixin desktop {
+	@media (min-width: ($desktop * 1px)) {
+		@content;
+	}
+}
+
+@mixin devices {
+	@media (max-width: (($desktop - 1) * 1px)) {
+		@content;
+	}
+}

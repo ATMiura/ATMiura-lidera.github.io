@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+:root {
+	--width-base: 1280;
+	--width-current: 1280px;
+	--width-multiplier: var(--width-current) / var(--width-base);
+
+	@media (min-width: 1025px) {
+		--width-base: 1280;
+	}
+
+	@media (max-width: 1024px) {
+		--width-base: 480;
+		--width-current: 100vw;
+	}
+
+	@media (max-width: 767px) {
+		--width-base: 375;
+		--width-current: 100vw;
+	}
+}
+
+html,
+body {
+	width: 100%;
+	min-width: 320px;
+	font-family: $font-gilroy;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.38;
+	color: $color-text;
+	background-color: $color-white;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	text-decoration-skip: objects;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 40px;
+	max-width: 1208px;
+	width: 100%;
+
+	@include devices {
+		padding: 0 16px;
+	}
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
